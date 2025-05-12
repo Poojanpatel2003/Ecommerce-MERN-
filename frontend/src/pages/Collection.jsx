@@ -21,19 +21,22 @@ const Collection = () => {
     }
 
     const toggleSubCategory=(e)=>{
-        if(subCategory.includes(e.target.value)){
+        if(subCategory.includes(e.target.value)){ 
             setSubCategory(prev=>prev.filter(item=>item!==e.target.value))
         }
         else{
-            setSubCategory(prev=>[...prev,e.target.value])
-        }
-    }
-
+            setSubCategory(prev=>[...prev,e.target.value]) 
+                
+        }             
+    } 
+    
+            
     const applyFilter=()=>{
         let productsCopy=products.slice();
         if(showSearch && search){
             productsCopy=productsCopy.filter(item=>item.name.toLowerCase().includes(search.toLowerCase()))
-        }
+        } 
+        
         if(category.length>0){
             productsCopy=productsCopy.filter(item=>category.includes(item.category))
         }
