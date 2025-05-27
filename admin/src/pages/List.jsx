@@ -59,7 +59,7 @@ const List = ({token}) => {
                     <p>{currency}{item.price}</p>
                    
 
-                    <p onClick={()=>removeProduct(item._id)} className="text-right ml-13 bg-gray-100 w-9 border rounded-full md:text-center cursor-pointer text-lg">x</p>
+                    <p onClick={()=>removeProduct(item._id)} className="text-right md:text-center cursor-pointer text-lg">x</p>
                   
                 </div>
             ))

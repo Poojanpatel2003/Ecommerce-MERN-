@@ -5,7 +5,7 @@ import connectDB from './config/Mongodb.js';
 import connectCloudinary from './config/cloudinary.js';
 import userRouter from './routes/userRoutes.js';
 import productRouter from './routes/productRoute.js';
-
+import cartRouter from './routes/cartRoute.js'
 const app=express()
 const port=process.env.PORT || 4000
 connectDB();
@@ -15,7 +15,7 @@ connectCloudinary();
 app.use(express.json())
 app.use(cors())
 app.use('/api/product',productRouter)
-
+app.use('/api/cart',cartRouter)
 //api endpoints
 app.get('/',(req,res)=>{
     res.send("API Working");
